@@ -9,7 +9,10 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.webkit.CookieManager;
 import android.webkit.URLUtil;
+import io.th.customwebview.helpers.StatusType;
+
 import com.google.appinventor.components.annotations.DesignerComponent;
+import com.google.appinventor.components.annotations.Options;
 import com.google.appinventor.components.annotations.SimpleEvent;
 import com.google.appinventor.components.annotations.SimpleFunction;
 import com.google.appinventor.components.annotations.SimpleProperty;
@@ -24,7 +27,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-@DesignerComponent(version = 6, versionName = "1.0", description = "Helper class of CustomWebView extension for downloading files <br> Developed by TechHamara", nonVisible = true, iconName = "icon.png")
+@DesignerComponent(version = 7, versionName = "1.0", description = "Helper class of CustomWebView extension for downloading files <br> Developed by TechHamara", nonVisible = true, iconName = "icon.png")
 public class DownloadHelper extends AndroidNonvisibleComponent implements OnDestroyListener {
     private final Context context;
     private final DownloadManager downloadManager;
@@ -78,7 +81,7 @@ public class DownloadHelper extends AndroidNonvisibleComponent implements OnDest
     }
 
     @SimpleFunction(description = "Returns the status of the download: 1=Pending, 2=Running, 4=Paused, 8=Successful, 16=Failed")
-    public int GetDownloadStatus(long id) {
+    public int GetDownloadStatus(@Options(StatusType.class) long id) {
         int status = -1;
         DownloadManager.Query query = new DownloadManager.Query();
         query.setFilterById(id);

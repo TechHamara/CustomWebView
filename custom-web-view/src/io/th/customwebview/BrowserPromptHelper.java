@@ -12,7 +12,7 @@ import com.google.appinventor.components.annotations.SimpleFunction;
 import com.google.appinventor.components.common.ComponentCategory;
 import com.google.appinventor.components.runtime.*;
 
-@DesignerComponent(version = 6, versionName = "1.0", description = "Helper class of CustomWebView extension to add app to browsers list<br> Developed by TechHamara", iconName = "icon.png")
+@DesignerComponent(version = 7, versionName = "1.0", description = "Helper class of CustomWebView extension to add app to browsers list<br> Developed by TechHamara", iconName = "icon.png")
 public class BrowserPromptHelper extends AndroidNonvisibleComponent implements OnNewIntentListener {
     public Activity activity;
 

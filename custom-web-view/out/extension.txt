@@ -6,7 +6,7 @@ An extension for MIT App Inventor 2.
 ## 📝 Specifications
 * **
 📦 **Package:** io.th.customwebview
-💾 **Size:** 63.04 KB
+💾 **Size:** 64.50 KB
 ⚙️ **Version:** 1.0
 📱 **Minimum API Level:** 21
 📅 **Updated On:** [date=2026-01-28 timezone="Asia/Calcutta"]
@@ -1159,7 +1159,9 @@ Returns the status of the download: 1=Pending, 2=Running, 4=Paused, 8=Successful
 
 | Parameter | Type
 | - | - |
-| id | number
+| id | StatusType <small><mark>(helper blocks)</mark></small>
+
+* Enums for **StatusType**: `Pending`, `Running`, `Paused`, `Successful`, `Failed`
 
 ### GetFailureReason
 Returns the reason code if the download failed. 1000=Unknown, 1001=File Error, 1002=Unhandled HTTP Code, 1004=HTTP Data Error, 1005=Too Many Redirects, 1006=Insufficient Space, 1007=Device Not Found, 1008=Cannot Resume, 1009=File Already Exists, 1011=Placeholder Not Supported.
